@@ -1,0 +1,257 @@
+/* ===== RESET E BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #4ef542;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff3d71;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+  padding: 15px 0;
+  box-shadow: 0 0 15px rgba(255, 61, 113, 0.5);
+  text-align: center;
+}
+
+header h1 {
+  color: #ff3d71;
+  font-size: 2.5rem;
+  text-shadow: 0 0 15px #ff3d71;
+  margin-bottom: 10px;
+}
+
+header nav a {
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: #4ef542;
+}
+
+/* ===== MAIN ===== */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== SEÇÕES ===== */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  color: #ff3d71;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #ff3d71;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  color: #4ef542;
+  border: 2px solid #ff3d71;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin: 10px;
+}
+
+button:hover {
+  background: #ff3d71;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 61, 113, 0.7);
+}
+
+/* ===== CARDS ===== */
+.categoria {
+  margin-bottom: 40px;
+}
+
+.categoria h3 {
+  color: #ff3d71;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #ff3d71;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 180px;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 61, 113, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 61, 113, 0.7);
+}
+
+.card h4 {
+  color: #4ef542;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+/* ===== FORMULÁRIOS ===== */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 61, 113, 0.5);
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff3d71;
+  background: #121212;
+  color: #fff;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #4ef542;
+}
+
+/* ===== ABAS DE VÍDEOS ===== */
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+}
+
+.tab-container input[type="radio"] {
+  display: none;
+}
+
+.tab-container label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2a2a2a;
+  color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 12px 12px 0 0;
+  margin-right: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.tab-container label:hover {
+  background: #ff3d71;
+}
+
+.tab-container input[type="radio"]:checked + label {
+  background: #ff3d71;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: inset 0 0 15px rgba(255, 61, 113, 0.3);
+  margin-top: -5px;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
+}
+
+.tab-content ul {
+  list-style: none;
+}
+
+.tab-content li {
+  margin-bottom: 10px;
+}
+
+.tab-content a {
+  color: #4ef542;
+}
+
+.tab-content a:hover {
+  color: #ff3d71;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ===== */
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-container label {
+    margin-bottom: 5px;
+  }
+}
+/* ===== SEÇÃO HOME ===== */
+#home {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#home p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.opcoes-home {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card.selecionada {
+  border: 2px solid #4ef542;
+  box-shadow: 0 0 25px #4ef542;
+}
