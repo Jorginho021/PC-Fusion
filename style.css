@@ -30,6 +30,7 @@ header {
 }
 
 /* Estilo para a logo */
+
 }
 .logo {
   width: 60px; /* Ajuste o tamanho da logo */
@@ -41,6 +42,7 @@ header h1 {
   letter-spacing: 2px;
   font-weight: 700;
 }
+
 
 /* Estilo para o rodapé */
 footer {
@@ -139,3 +141,4 @@ main {
   }
 
 }
+
