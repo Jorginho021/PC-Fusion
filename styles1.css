@@ -152,6 +152,82 @@ main {
   margin-top: 20px;
 }
 
+/* Resultado estilizado */
+.resultado-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(45,0,54,0.08);
+  border: 1px solid rgba(45,0,54,0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.75));
+  min-width: 320px;
+  max-width: 720px;
+  text-align: left;
+  transition: transform 220ms ease, box-shadow 220ms ease, opacity 220ms ease;
+  opacity: 0;
+  transform: translateY(6px) scale(0.995);
+}
+.resultado-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.resultado-card .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: inline-grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.resultado-card .content {
+  display: flex;
+  flex-direction: column;
+}
+.resultado-card .title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: #2d0036;
+}
+.resultado-card .details {
+  font-size: 0.96rem;
+  color: #3b2a4a;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+.resultado-card.success {
+  border-color: rgba(32,160,88,0.15);
+  box-shadow: 0 10px 36px rgba(32,160,88,0.06);
+}
+.resultado-card.success .icon { background: linear-gradient(180deg,#28c76f,#14a85a); }
+
+.resultado-card.error {
+  border-color: rgba(220,38,38,0.12);
+  box-shadow: 0 10px 36px rgba(220,38,38,0.06);
+}
+.resultado-card.error .icon { background: linear-gradient(180deg,#ff6b6b,#d93838); }
+
+/* lista de problemas dentro do cartão */
+.resultado-card .problems {
+  margin-top: 8px;
+  display: grid;
+  gap: 6px;
+  list-style: none; /* remover bullets */
+  padding: 0; /* remover recuo padrão */
+  margin-left: 0; /* garantir alinhamento */
+}
+.resultado-card .problems li {
+  font-size: 0.92rem;
+  color: rgba(45,0,54,0.85);
+}
+
+/* Remover qualquer marcador para navegadores que usem ::marker */
+.resultado-card .problems li::marker { display: none; }
+
 @media (max-width: 900px) {
   main {
     padding: 18px 8px;
