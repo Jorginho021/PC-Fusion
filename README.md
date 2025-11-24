@@ -1,76 +1,169 @@
-🖥️ PC-Fusion
-📌 Descrição do Projeto
+🎯 Sobre o Projeto
 
-O PC Fusion é um site interativo que ajuda usuários a montar computadores de forma prática e segura, verificando automaticamente a compatibilidade entre as peças escolhidas.
-O sistema cobre desde PCs básicos para estudo e trabalhos até setups gamer de alto desempenho, analisando CPU, placa-mãe, RAM, GPU, SSD e fonte com feedback instantâneo.
+O PC Fusion foi criado para facilitar o processo de montar um computador, automatizando a verificação de compatibilidade entre CPU, placa-mãe, RAM, GPU, SSD e fonte.
 
-O objetivo do projeto é evitar erros, garantir compatibilidade total e tornar a experiência de montar um PC mais simples, didática e confiável, mesmo para iniciantes.
+Ele resolve problemas comuns enfrentados por iniciantes, como misturar peças incompatíveis ou não entender padrões de hardware.
+O projeto é único porque oferece feedback visual imediato, interface moderna e um fluxo simples para qualquer usuário.
+
+Público-alvo
+
+Iniciantes em hardware
+
+Estudantes
+
+Gamers
+
+Técnicos iniciantes
+
+🎓 Por que este projeto foi criado?
+
+Projeto desenvolvido para estudos, prática e aprimoramento em desenvolvimento web front-end e hardware, aplicando conhecimentos de HTML, CSS e JavaScript em uma aplicação funcional e útil.
+
+🎬 Demonstração
+
+🔗 Versão ao vivo: adicione o link aqui
+📹 Vídeo de demonstração: adicione o link aqui
 
 ⚙️ Funcionalidades
+Recursos principais
 
-🔧 Seleção de peças: CPU, placa-mãe, RAM, GPU, SSD e fonte através de menus interativos.
+Seleção interativa de CPU, placa-mãe, RAM, GPU, SSD e fonte
 
-🔍 Verificação automática de compatibilidade entre todas as peças.
+Verificação automática de compatibilidade
 
-🎯 Feedback visual imediato, usando cores e ícones:
+Feedback visual instantâneo:
 
-✅ Verde → compatível
+🟢 Verde = compatível
 
-❌ Vermelho → incompatível
+🔴 Vermelho = incompatível
 
-🖥️ Suporte a diferentes tipos de builds:
+Suporte a builds básicas, intermediárias e gamer
 
-Básicas
+Design moderno e responsivo
 
-Intermediárias
+Interface intuitiva e prática
 
-Gamer / Alto desempenho
+Futuras funcionalidades
 
-🎨 Design moderno, responsivo e com estética gamer.
+Sistema de orçamento automático
 
-📱 Compatível com computadores e celulares.
+Lista completa de peças com imagens
 
-🛠️ Tecnologias Utilizadas
+Exportação da build em PDF
 
-HTML5 – Estrutura das páginas e formulários.
+Modo escuro personalizado
 
-CSS3 – Estilo moderno com gradientes, neons e animações.
+🚀 Tecnologias Utilizadas
+Front-End
 
-JavaScript (JS) – Lógica de compatibilidade em tempo real e interatividade do site.
+HTML5
 
-📁 Estrutura do Projeto
+CSS3 (gradientes, neons e responsividade)
+
+JavaScript (ES6+)
+
+Recursos adicionais
+
+Google Fonts
+
+Font Awesome
+
+Git & GitHub
+
+📦 Pré-requisitos
+
+Navegador atualizado
+
+Git (opcional)
+
+VSCode
+
+Extensões sugeridas
+
+Live Server
+
+HTML CSS Support
+
+Prettier
+
+ES6 Snippets
+
+🔧 Instalação
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-projeto.git
+
+# Entre na pasta
+cd seu-projeto
+
+
+Abra o arquivo index.html no navegador
+ou use o Live Server.
+
+💻 Como Usar
+
+Abra o projeto
+
+Escolha as peças do PC
+
+Veja a compatibilidade em tempo real
+
+Ajuste conforme os avisos visuais
+
+📁 Estrutura de Pastas
 PC-Fusion/
 │
-├── index.html        # Página inicial com seletor de peças
+├── index.html
+│
 ├── css/
-│   └── style.css     # Estilos modernos e responsivos
+│   └── style.css
 │
 └── js/
-    └── script.js     # Sistema lógico de compatibilidade
+    └── script.js
 
-🚀 Como Executar
+🗺️ Roadmap
 
-Baixe ou clone o repositório.
+ Estrutura HTML
 
-Abra o arquivo index.html no navegador.
+ CSS responsivo
 
-Escolha as peças e veja a compatibilidade em tempo real.
+ Lógica de compatibilidade
 
-🎮 Objetivo do Projeto
+ Animações avançadas
 
-Ajudar iniciantes e entusiastas a montar um PC corretamente.
+ Sistema de orçamento
 
-Evitar erros comuns de compatibilidade.
+ Modo escuro
 
-Simplificar o processo de escolha das peças.
+ PWA
 
-Tornar o aprendizado sobre hardware mais acessível e visual.
+🤝 Contribuindo
+git checkout -b feature/NovaFuncionalidade
+git commit -m "Adiciona nova funcionalidade"
+git push origin feature/NovaFuncionalidade
+
+
+Abra um Pull Request.
 
 📄 Licença
 
-Este projeto é livre para uso e modificação.
+Licença MIT.
 
-✨ Autor
+✉️ Contato
 
-Desenvolvido por Isaac Ramos E Jorge Cardoso de Jesus
-💻 Projeto criado para estudos, prática e aprimoramento em hardware e desenvolvimento web.
+Autores:
+
+Isaac Ramos
+
+Jorge Cardoso de Jesus
+
+🎓 Agradecimentos
+
+Professores
+
+Colegas de turma
+
+Font Awesome
+
+Unsplash
+
+Stack Overflow
