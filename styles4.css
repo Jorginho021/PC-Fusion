@@ -31,11 +31,11 @@ header {
   width: 60px; /* Ajuste o tamanho da logo */
   height: auto;
 }
-
 header h1 {
-  font-size: 2rem;
-  margin: 0;
-}
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
 
 nav {
   margin-top: 10px;
@@ -160,4 +160,5 @@ main {
   .dev-card {
     width: 90%;
   }
+
 }
