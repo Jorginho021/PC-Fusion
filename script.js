@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
       // Detectar "marca"/família da placa-mãe (Intel vs AMD) por palavras-chave
       let placaBrand = 'Desconhecido';
-      if (/Z790|Z690|B660|H610|Z590/i.test(placa) || /Intel/i.test(placa)) placaBrand = 'Intel';
-      if (/B550|X570|B650|X670/i.test(placa)) placaBrand = 'AMD';
+      if (/Z790|Z690|B660|Z590/i.test(placa) || /Intel/i.test(placa)) placaBrand = 'Intel';
+      if (/B550|X570|B650|H610|X670/i.test(placa)) placaBrand = 'AMD';
   
       // Verificar compatibilidade CPU x Placa
       if (cpuBrand === 'Desconhecido' || placaBrand === 'Desconhecido') {
