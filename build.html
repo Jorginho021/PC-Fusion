@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Fusion - Montar PC</title>
+  <link rel="stylesheet" href="styles1.css">
+  <style>
+    span.slider:before {
+      box-sizing: border-box;
+    }
+
+    label.switch {
+      cursor: pointer;
+      width: 90px;
+    }
+    /* Estilos para switches (interruptores) - Design Moderno */
+    .switch-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .label-with-switch {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .label-with-switch > label:first-child {
+      min-width: 100px;
+      font-weight: 600;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+      transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+      border-radius: 24px;
+      border: 2px solid #d0d0d0;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      top: 1.5px;
+      background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+      transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+    }
+
+    .switch:hover .slider {
+      border-color: #b0b0b0;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    input:checked + .slider {
+      background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+      border-color: #388e3c;
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(63px);
+      background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    input:checked:hover + .slider {
+      box-shadow: 0 4px 16px rgba(76, 175, 80, 0.4);
+    }
+
+    .switch-label {
+      font-size: 0.85em;
+      color: #666;
+      user-select: none;
+      cursor: pointer;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="LogoPc.jpg" alt="Logo do PC Fusion" class="logo">
+      <h1>PC Fusion</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="build.html">Montar PC</a>
+      <a href="pecas.html">Peças</a>
+         <a href="Videos.html">Vídeos</a>
+      <a href="desenvolvedores.html">Nós</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="montar-pc">
+      <h2>Montar seu PC</h2>
+      <p>Escolha suas peças e veja se são compatíveis!</p>
+
+      <div class="opcoes-montagem">
+        <!-- CPU -->
+        <div class="opcao">
+          <label>CPU:</label>
+          <select id="cpu">
+            <option value="">Selecione</option>
+            <!-- Intel Série 14 (Última) -->
+            <option value="Intel Core i9 14900K">Intel Core i9 14900K</option>
+            <option value="Intel Core i9 14900KF">Intel Core i9 14900KF</option>
+            <option value="Intel Core i7 14700K">Intel Core i7 14700K</option>
+            <option value="Intel Core i7 14700KF">Intel Core i7 14700KF</option>
+            <option value="Intel Core i5 14600K">Intel Core i5 14600K</option>
+            <!-- Intel Série 13 -->
+            <option value="Intel Core i9 13900K">Intel Core i9 13900K</option>
+            <option value="Intel Core i9 13900KF">Intel Core i9 13900KF</option>
+            <option value="Intel Core i7 13700K">Intel Core i7 13700K</option>
+            <option value="Intel Core i7 13700KF">Intel Core i7 13700KF</option>
+            <option value="Intel Core i5 13600K">Intel Core i5 13600K</option>
+            <option value="Intel Core i5 13600KF">Intel Core i5 13600KF</option>
+            <!-- Intel Série 12 -->
+            <option value="Intel Core i9 12900K">Intel Core i9 12900K</option>
+            <option value="Intel Core i9 12900KF">Intel Core i9 12900KF</option>
+            <option value="Intel Core i7 12700K">Intel Core i7 12700K</option>
+            <option value="Intel Core i7 12700KF">Intel Core i7 12700KF</option>
+            <option value="Intel Core i5 12600K">Intel Core i5 12600K</option>
+            <option value="Intel Core i5 12600KF">Intel Core i5 12600KF</option>
+            <option value="Intel Core i3 12100">Intel Core i3 12100</option>
+            <!-- AMD Ryzen 7000 (Última) -->
+            <option value="AMD Ryzen 9 7950X">AMD Ryzen 9 7950X</option>
+            <option value="AMD Ryzen 9 7900X">AMD Ryzen 9 7900X</option>
+            <option value="AMD Ryzen 7 7700X">AMD Ryzen 7 7700X</option>
+            <option value="AMD Ryzen 5 7600X">AMD Ryzen 5 7600X</option>
+            <option value="AMD Ryzen 5 7600">AMD Ryzen 5 7600</option>
+            <!-- AMD Ryzen 5000 -->
+            <option value="AMD Ryzen 9 5950X">AMD Ryzen 9 5950X</option>
+            <option value="AMD Ryzen 9 5900X3D">AMD Ryzen 9 5900X3D</option>
+            <option value="AMD Ryzen 9 5900X">AMD Ryzen 9 5900X</option>
+            <option value="AMD Ryzen 7 5800X3D">AMD Ryzen 7 5800X3D</option>
+            <option value="AMD Ryzen 7 5800X">AMD Ryzen 7 5800X</option>
+            <option value="AMD Ryzen 5 5600X">AMD Ryzen 5 5600X</option>
+            <option value="AMD Ryzen 3 5300G">AMD Ryzen 3 5300G</option>
+            <!-- AMD Ryzen 3000 (Antigas) -->
+            <option value="AMD Ryzen 9 3900X">AMD Ryzen 9 3900X</option>
+            <option value="AMD Ryzen 7 3700X">AMD Ryzen 7 3700X</option>
+            <option value="AMD Ryzen 5 3600">AMD Ryzen 5 3600</option>
+          </select>
+        </div>
+
+        <!-- Placa-mãe -->
+        <div class="opcao">
+          <label>Placa-mãe:</label>
+          <select id="placaMae">
+            <option value="">Selecione</option>
+            <!-- Intel Série LGA1700 Última (Z790) -->
+            <option value="Intel Z790">Intel Z790</option>
+            <option value="ASUS Z790-E">ASUS Z790-E</option>
+            <option value="MSI MPG Z790">MSI MPG Z790</option>
+            <option value="Gigabyte Z790 Master">Gigabyte Z790 Master</option>
+            <!-- Intel Série LGA1700 Intermediária (B760) -->
+            <option value="Intel B760">Intel B760</option>
+            <option value="ASUS B760-F">ASUS B760-F</option>
+            <option value="MSI MPG B760">MSI MPG B760</option>
+            <!-- Intel Série LGA1700 Entrada (H770) -->
+            <option value="Intel H770">Intel H770</option>
+            <option value="ASUS H770-F">ASUS H770-F</option>
+            <!-- Intel Série Z690 (12ª Gen) -->
+            <option value="Aorus Z690">Aorus Z690</option>
+            <option value="MSI Z690">MSI Z690</option>
+            <!-- Intel Série Z590 (11ª Gen) -->
+            <option value="Intel Z590">Intel Z590</option>
+            <option value="ASUS Z590-E">ASUS Z590-E</option>
+            <!-- AMD Série AM5 Última (X870) -->
+            <option value="AMD X870">AMD X870</option>
+            <option value="ASUS X870-E">ASUS X870-E</option>
+            <option value="MSI X870">MSI X870</option>
+            <option value="Gigabyte X870">Gigabyte X870</option>
+            <!-- AMD Série AM5 (X670/B850) -->
+            <option value="MSI X670">MSI X670</option>
+            <option value="ASUS X670-E">ASUS X670-E</option>
+            <option value="Gigabyte X670">Gigabyte X670</option>
+            <option value="MSI B850">MSI B850</option>
+            <!-- AMD Série AM5 Entrada (B650) -->
+            <option value="MSI B650">MSI B650</option>
+            <option value="ASUS B650-E">ASUS B650-E</option>
+            <!-- AMD Série AM4 Última (X570) -->
+            <option value="Aorus X570">Aorus X570</option>
+            <option value="ASUS ROG X570">ASUS ROG X570</option>
+            <option value="MSI X570">MSI X570</option>
+            <!-- AMD Série AM4 Intermediária (B550) -->
+            <option value="Aorus B550">Aorus B550</option>
+            <option value="ASUS B550-F">ASUS B550-F</option>
+            <option value="MSI B550">MSI B550</option>
+            <!-- AMD Série AM4 Antigas (X370/B450) -->
+            <option value="ASUS X370">ASUS X370</option>
+            <option value="MSI B450">MSI B450</option>
+          </select>
+        </div>
+
+        <!-- RAM -->
+        <div class="opcao">
+          <label>RAM:</label>
+          <select id="ram">
+            <option value="">Selecione</option>
+            <!-- DDR4/DDR5 das marcas -->
+            <option value="DDR4 3200MHz Intel">DDR4 3200MHz Intel</option>
+            <option value="DDR4 3600MHz AMD">DDR4 3600MHz AMD</option>
+            <option value="DDR5 5200MHz Aorus">DDR5 5200MHz Aorus</option>
+            <option value="DDR5 6000MHz MSI">DDR5 6000MHz MSI</option>
+          </select>
+        </div>
+
+        <!-- GPU -->
+        <div class="opcao">
+          <label>GPU:</label>
+          <select id="gpu">
+            <option value="">Selecione</option>
+            <!-- NVIDIA Série 40 (Última geração) -->
+            <option value="Nvidia RTX 4090">Nvidia RTX 4090</option>
+            <option value="Nvidia RTX 4080">Nvidia RTX 4080</option>
+            <option value="Nvidia RTX 4070 Ti">Nvidia RTX 4070 Ti</option>
+            <option value="Nvidia RTX 4070">Nvidia RTX 4070</option>
+            <option value="Nvidia RTX 4060 Ti">Nvidia RTX 4060 Ti</option>
+            <option value="Nvidia RTX 4060">Nvidia RTX 4060</option>
+            <!-- NVIDIA Série 30 (Anterior) -->
+            <option value="Nvidia RTX 3090">Nvidia RTX 3090</option>
+            <option value="Nvidia RTX 3080">Nvidia RTX 3080</option>
+            <option value="Nvidia RTX 3070">Nvidia RTX 3070</option>
+            <option value="Nvidia RTX 3060 Ti">Nvidia RTX 3060 Ti</option>
+            <option value="Nvidia RTX 3060">Nvidia RTX 3060</option>
+            <option value="Nvidia GTX 1660">Nvidia GTX 1660</option>
+            <!-- AMD Série 7000 (Última geração) -->
+            <option value="AMD RX 7900 XTX">AMD RX 7900 XTX</option>
+            <option value="AMD RX 7900 XT">AMD RX 7900 XT</option>
+            <option value="AMD RX 7900">AMD RX 7900</option>
+            <option value="AMD RX 7800 XT">AMD RX 7800 XT</option>
+            <option value="AMD RX 7700 XT">AMD RX 7700 XT</option>
+            <option value="AMD RX 7600">AMD RX 7600</option>
+            <!-- AMD Série 6000 (Anterior) -->
+            <option value="AMD RX 6900 XT">AMD RX 6900 XT</option>
+            <option value="AMD RX 6800 XT">AMD RX 6800 XT</option>
+            <option value="AMD RX 6700 XT">AMD RX 6700 XT</option>
+            <option value="AMD RX 6700">AMD RX 6700</option>
+            <option value="AMD RX 6600">AMD RX 6600</option>
+            <!-- AMD Série 500 (Antigas) -->
+            <option value="AMD RX 580">AMD RX 580</option>
+            <option value="AMD RX 550">AMD RX 550</option>
+          </select>
+        </div>
+
+        <!-- SSD -->
+        <div class="opcao">
+          <label>SSD:</label>
+          <select id="ssd">
+            <option value="">Selecione</option>
+            <option value="SATA 1TB">SATA 1TB</option>
+            <option value="SATA 2TB">SATA 2TB</option>
+            <option value="NVMe 500GB">NVMe 500GB</option>
+            <option value="NVMe 1TB">NVMe 1TB</option>
+          </select>
+        </div>
+
+        <!-- Fonte -->
+        <div class="opcao">
+          <label>Fonte:</label>
+          <select id="fonte">
+            <option value="">Selecione</option>
+            <option value="550W">550W</option>
+            <option value="650W">650W</option>
+            <option value="750W">750W</option>
+            <option value="850W">850W</option>
+          </select>
+        </div>
+<!-- Fan-->
+<div class="opcao">
+  <div class="label-with-switch">
+    <label>Cooler:</label>
+    <label class="switch">
+      <input type="checkbox" id="coolerOpcional" title="Marque para exigir seleção do cooler">
+      <span class="slider"></span>
+    </label>
+    <span class="switch-label">Opcional</span>
+  </div>
+  <select id="Fan">
+    <option value="">Selecione</option>
+    <option value="Cooler Master SickleFlow">Cooler Master SickleFlow</option>
+    <option value="Corsair AF Series">Corsair AF Series</option>
+    <option value="Noctua NF-F12">Noctua NF-F12</option>
+    <option value="Thermaltake Riing">Thermaltake Riing</option>
+  </select>
+</div>
+
+<!-- Gabinete-->
+<div class="opcao">
+  <div class="label-with-switch">
+    <label>Gabinete:</label>
+    <label class="switch">
+      <input type="checkbox" id="gabineteOpcional" title="Marque para exigir seleção do gabinete">
+      <span class="slider"></span>
+    </label>
+    <span class="switch-label">Opcional</span>
+  </div>
+  <select id="Gabinete">
+    <option value="">Selecione</option>
+    <option value="Lian Li Lancool II">Lian Li Lancool II</option>
+    <option value="NZXT H510">NZXT H510</option>
+    <option value="Cooler Master MasterBox MB520">Cooler Master MasterBox MB520</option>
+    <option value="Corsair iCUE 4000X">Corsair iCUE 4000X</option>
+  </select>
+</div>
+        <button id="verificar">Verificar Compatibilidade</button>
+
+        <p id="resultado" style="margin-top:20px; font-weight:bold;"></p>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script-pecas.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
