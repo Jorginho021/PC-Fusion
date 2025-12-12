@@ -1,3 +1,17 @@
+<img width="1909" height="949" alt="image" src="https://github.com/user-attachments/assets/fb0222dc-c163-4a90-8bf1-b74724650d73" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 🎯 Sobre o Projeto
 
 O PC Fusion foi criado para facilitar o processo de montar um computador, automatizando a verificação de compatibilidade entre CPU, placa-mãe, RAM, GPU, SSD e fonte.
@@ -163,4 +177,5 @@ Font Awesome
 Unsplash
 
 Stack Overflow
+
 
