@@ -132,10 +132,6 @@ PC-Fusion/
 
  Sistema de orçamento
 
- Modo escuro
-
- PWA
-
 🤝 Contribuindo
 git checkout -b feature/NovaFuncionalidade
 git commit -m "Adiciona nova funcionalidade"
@@ -167,3 +163,4 @@ Font Awesome
 Unsplash
 
 Stack Overflow
+
